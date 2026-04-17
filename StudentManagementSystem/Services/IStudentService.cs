@@ -1,0 +1,13 @@
+using StudentManagementSystem.Models;
+
+namespace StudentManagementSystem.Services
+{
+    public interface IStudentService
+    {
+        Task<List<Student>> GetAllAsync();
+        Task<Student?> GetByIdAsync(int id);
+        Task<Student> CreateAsync(Student student);
+        Task<Student?> UpdateAsync(int id, Student student);
+        Task<bool> DeleteAsync(int id);
+    }
+}
